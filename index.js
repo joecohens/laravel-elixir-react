@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     utilities = require('laravel-elixir/ingredients/commands/Utilities'),
     notification = require('laravel-elixir/ingredients/commands/Notification');
 
-
 elixir.extend('react', function (src, options) {
 
     var config = this,
@@ -40,3 +39,4 @@ elixir.extend('react', function (src, options) {
 
     return this.queueTask('react');
 });
+
