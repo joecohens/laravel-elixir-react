@@ -1,0 +1,34 @@
+{
+  "name": "laravel-elixir-react",
+  "version": "0.0.1",
+  "description": "Laravel Elixir React Extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "react",
+    "gulp"
+  ],
+  "author": {
+    "name": "Joseph Cohen"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "gulp-if": "^1.2.5",
+    "gulp-notify": "^2.0.0",
+    "gulp-react": "^2.0.0",
+    "gulp-uglify": "^1.0.1",
+    "underscore": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joecohens/laravel-elixir-react"
+  },
+  "bugs": {
+    "url": "https://github.com/joecohens/laravel-elixir-react/issues"
+  },
+  "homepage": "https://github.com/joecohens/laravel-elixir-react"
+}
