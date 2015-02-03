@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     react = require('gulp-react'),
-    gulpif = require('gulp-if'),
+    gulpIf = require('gulp-if'),
     uglify = require('gulp-uglify'),
     _ = require('underscore'),
     elixir = require('laravel-elixir'),
@@ -39,4 +39,3 @@ elixir.extend('react', function (src, options) {
 
     return this.queueTask('react');
 });
-
