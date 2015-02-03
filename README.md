@@ -13,25 +13,27 @@ npm install --save-dev laravel-elixir-react
 ### Example *Gulpfile*:
 
 ```javascript
-var elixir = require('laravel-elixir');
+var elixir = require("laravel-elixir");
 
-require('laravel-elixir-react');
+require("laravel-elixir-react");
 
 elixir(function(mix) {
-    mix.react("bootstrap.jsx");
+    mix.react("app.jsx");
 });
 
 ```
-First argument is the entry point of your application _(default directory is resources/assets/js)_. Second argument is destination directory. In third argument you could pass react options. Two latest parameters are optional. In production bundle will be compressed.
+First argument is the entry point of your application _(default directory is resources/assets/js)_. In third argument you could pass react options. In production bundle will be compressed.
 
 #### Advanced example
 
 ```javascript
 elixir(function(mix) {
-    mix.react("bootstrap.js", "public/js", {
-    	output: {
-            filename: "bundle.js"
-        }
+    mix.react("app.jsx", {
+    	output: "app.js",
+        sourceMap: false,
+        harmony: false,
+        sourceFilename: "app.js.map",
+        stripTypes: false
     });
 });
 ```
