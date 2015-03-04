@@ -36,6 +36,7 @@ elixir.extend('react', function (src, options) {
     });
 
     this.registerWatcher('react', options.srcDir + '/**/*.js');
+    this.registerWatcher('react', options.srcDir + '/**/*.jsx');
 
     return this.queueTask('react');
 });
