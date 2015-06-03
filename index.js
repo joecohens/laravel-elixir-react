@@ -8,21 +8,17 @@ var gulp = require('gulp'),
     notification = require('laravel-elixir/ingredients/commands/Notification');
 
 elixir.extend('react', function (src, options) {
+    var config = this;
 
-    var config = this,
-        defaultOptions = {
-            debug:         ! config.production,
-            srcDir:        config.assetsDir + 'js',
-            output:        config.jsOutput
-        };
+    options = _.extend({
+        debug:  ! config.production,
+        srcDir: config.assetsDir + 'js',
+        output: config.jsOutput
+    }, options);
 
-    options = _.extend(defaultOptions, options);
     src = "./" + utilities.buildGulpSrc(src, options.srcDir);
 
-    options = _.extend(defaultOptions, options);
-
     gulp.task('react', function () {
-
         var onError = function(e) {
             new notification().error(e, 'React Compilation Failed!');
             this.emit('end');
