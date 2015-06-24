@@ -16,7 +16,7 @@ elixir.extend('react', function (src, options) {
         output: config.jsOutput
     }, options);
 
-    src = "./" + utilities.buildGulpSrc(src, options.srcDir);
+    src = "./" + utilities.buildGulpSrc(src, options.srcDir, "");
 
     gulp.task('react', function () {
         var onError = function(e) {
