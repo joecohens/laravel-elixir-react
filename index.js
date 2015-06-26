@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 elixir.extend('react', function (src, options) {
     var config = this;
-    var filePattern = '/**/*.+(js|jsx)';
+    var filePattern = '**/*.+(js|jsx)';
 
     options = _.extend({
         debug:  ! config.production,
@@ -32,7 +32,7 @@ elixir.extend('react', function (src, options) {
             .pipe(new notification().message('React Compiled!'));
     });
 
-    this.registerWatcher('react', options.srcDir + filePattern);
+    this.registerWatcher('react', options.srcDir + '/' + filePattern);
 
     return this.queueTask('react');
 });
