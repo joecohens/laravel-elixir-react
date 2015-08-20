@@ -1,3 +1,7 @@
+##DEPRECATED: Babel is now included on elixir by default.
+
+React-tools is deprecated. For more information, visit https://fb.me/react-tools-deprecated
+
 # laravel-elixir-react
 
 Simple extension to *laravel elixir* to precompile Facebook React JSX templates into javascript.
